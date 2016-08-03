@@ -1,0 +1,5 @@
+name: Twig Custom Date Range Filter
+type: module
+description: Custom Twig filter to show dates ranges as short as possible. Eg Aug 2-4 2016, Jul 31 - Aug 4, 2016
+core: 8.x
+package: Custom

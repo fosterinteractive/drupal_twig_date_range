@@ -1,0 +1,5 @@
+services:
+  twig_custom_date_range_filter.twig_extension:
+    class: Drupal\twig_custom_date_range_filter\Twig\TwigCustomDateRangeFilter
+    tags:
+      - { name: twig.extension }

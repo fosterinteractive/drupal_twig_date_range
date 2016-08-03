@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains twig_custom_date_range_filter.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function twig_custom_date_range_filter_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the twig_custom_date_range_filter module.
+    case 'help.page.twig_custom_date_range_filter':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Custom Twig filter to show dates ranges as short as possible. Eg Aug 2-4 2016, Jul 31 - Aug 4, 2016') . '</p>';
+      return $output;
+
+    default:
+  }
+}
