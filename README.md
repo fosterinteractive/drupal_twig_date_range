@@ -1,14 +1,15 @@
 #twig_custom_date_range_filter#
 
 Module adds a Custom Twig filter to show dates ranges as short as possible.
+
 This module is not very flexible, so it is more a proof of concept.
 
 ##Example Output##
 
-Same Month & Year   = Aug 2-4, 2016
-Same Year           = Jul 31 - Aug 4, 2016
-Different Years     = Dec 31, 2016 - Jan 2, 2017
-No "End" Date       = Dec 31, 2016
+* Same Month & Year   = Aug 2-4, 2016
+* Same Year           = Jul 31 - Aug 4, 2016
+* Different Years     = Dec 31, 2016 - Jan 2, 2017
+* No "End" Date       = Dec 31, 2016
 
 
 ## Installation ##
@@ -20,10 +21,10 @@ No "End" Date       = Dec 31, 2016
 * Pipe |date_range and use the end date as the argument
 
 
-
-node--type.html.twig
-
+## Usage ##
 ```
+<!--node--type.html.twig -->
+
 <h2 class="c-date">
   {{ node.field_start_date.value|date_range(node.field_end_date.value) }}
 </h2>
