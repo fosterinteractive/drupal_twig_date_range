@@ -15,15 +15,17 @@ This module is not very flexible, so it is more a proof of concept.
 ## Installation ##
 
 * Enable Module
-* Create 2 date fields on your node "start_date" and "end_date"
+* Create 2 date fields on your node "start_date" and "end_date", 1 value only.
 * Update the node template
-* Use the node.field_start_date (not content.field_start_date)
-* Pipe |date_range and use the end date as the argument
+* In Twig, use node.field_start_date.value (not content.field_start_date)
+* Pipe |date_range and use the node.field_start_end_date.value as the argument
 
 
 ## Usage ##
-```
-<!--node--type.html.twig -->
+
+```Twig
+
+<!-- node--type.html.twig -->
 
 <h2 class="c-date">
   {{ node.field_start_date.value|date_range(node.field_end_date.value) }}
